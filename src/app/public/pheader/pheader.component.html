@@ -1,0 +1,14 @@
+<header class="m-20 container">
+  <nav class="d-flex flex-justify-content-between flex-align-items-center Marck middle">
+    <a [routerLink]="['/home']" class="logo"><img src="../../../assets/img/_Logo SEMPRE LINDA.jpeg" alt="Logo"></a>
+    <ul class="d-flex flex-justify-content-around">
+      <li><a [routerLink]="['/home']">Accueil</a></li>
+      <li><a [routerLink]="['/menu']">Menu</a></li>
+      <li><a [routerLink]="['/reservation']">Réservation</a></li>
+      <li><a [routerLink]="['/contact']">Contact</a></li>
+      <li *ngIf="!authService.isAuthenticated()"><a [routerLink]="['/auth/login']">Connexion</a></li>
+      <li *ngIf="authService.isAuthenticated()"><a href="#" (click)="logout()">Déconnexion</a></li>
+      <li *ngIf="authService.isAuthenticated() && isAdmin"><a [routerLink]="['/admin']">Admin</a></li>
+    </ul>
+  </nav>
+</header>

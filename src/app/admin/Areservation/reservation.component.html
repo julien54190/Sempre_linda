@@ -1,0 +1,36 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>#</th>
+        <th>User_id</th>
+        <th>nom</th>
+        <th>nombre de personne</th>
+        <th>date</th>
+        <th>heure</th>
+        <th>date de creation</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let reservation of reservationList">
+        <td><a [routerLink]="['edit', reservation.id]">Edit</a></td>
+        <td>{{reservation.id}}</td>
+        <td>{{reservation.user_id}}</td>
+        <td>{{reservation.nom}}</td>
+        <td>{{reservation.Nb_personne}}</td>
+        <td>{{reservation.Date | date:'dd/MM/yyyy'}}</td>
+        <td>{{reservation.heure}}</td>
+        <td>{{reservation.createdAt | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+

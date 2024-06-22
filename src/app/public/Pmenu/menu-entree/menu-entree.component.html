@@ -1,0 +1,40 @@
+<router-outlet></router-outlet>
+
+<section class="section-1 container d-flex flex-column flex-align-items-center">
+  <div class="m-auto text-align">
+    <h1 class="m-20 Marck">Nos <br>Entrées</h1>
+    <div class="home-yellow">
+      <p>
+        Les Italiens prennent souvent avant leurs pâtes,
+      </p>
+      <p>un antipasto.</p>
+    </div>
+  </div>
+  </section>
+
+<div class="small-container">
+  <h2>Nos Entrées <span>(en plat + 3)</span></h2>
+  <div *ngFor="let entree of entrees" class="d-flex flex-justify-content-between m-10">
+    <div>
+      <p>{{ entree.nom }} <span class="litle">({{ entree.ingredient }} )</span></p>
+    </div>
+    <div class="d-flex flex-justify-content-center flex-align-items-center">
+      <p class="pr-10">{{ entree.prix }} €
+        <div *ngIf="authService.isAuthenticated()">
+          <label>
+            <input type="checkbox" #mainCourse (click)="$event.stopPropagation()" />
+          </label>
+          <button class="btn btn-primary litle mg-10" (click)="addToCart(entree, mainCourse.checked)">Ajouter au panier</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<app-panier></app-panier>
+
+
+
+<app-panier></app-panier>
+
+
+

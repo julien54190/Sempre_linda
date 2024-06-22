@@ -1,0 +1,28 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>#</th>
+        <th>Nom</th>
+        <th>date Création</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menu of menuList">
+        <td><a [routerLink]="['edit', menu.id]">Edit</a></td>
+        <td>{{menu.id}}</td>
+        <td>{{menu.name}}</td>
+        <td>{{menu.createdAt | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+

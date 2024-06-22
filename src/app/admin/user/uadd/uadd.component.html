@@ -1,0 +1,85 @@
+
+<div class="container">
+  <form class="d-flex flex-column flex-align-items-center"
+  #f="ngForm"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()">
+  <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom"
+          name="nom"
+          [(ngModel)]="user.nom"
+          #nom="ngModel"
+          required
+      >
+  </div>
+  <div class="form-group">
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom"
+        name="prenom"
+        [(ngModel)]="user.prenom"
+        #prenom="ngModel"
+        required
+    >
+</div>
+<div class="form-group">
+  <label for="email">email</label>
+  <input type="email" id="email"
+      name="nom"
+      [(ngModel)]="user.email"
+      #email="ngModel"
+      required
+  >
+</div>
+<div class="form-group">
+  <label for="Numero">Numéro domicile</label>
+  <input type="text" id="Numero"
+      name="Numero"
+      [(ngModel)]="user.numero_domicile"
+      #numero_domicile="ngModel"
+      required
+  >
+</div>
+<div class="form-group">
+  <label for="rue">rue domicile</label>
+  <input type="text" id="rue"
+      name="rue"
+      [(ngModel)]="user.rue_domicile"
+      #rue_domicile="ngModel"
+      required
+  >
+</div>
+<div class="form-group">
+  <label for="ville">ville domicile</label>
+  <input type="text" id="ville"
+      name="ville"
+      [(ngModel)]="user.ville_domicile"
+      #ville_domicile="ngModel"
+      required
+  >
+</div>
+<div class="form-group">
+  <label for="zip">Code Postal</label>
+  <input type="zip" id="zip"
+      name="zip"
+      [(ngModel)]="user.zip"
+      #zip="ngModel"
+      required
+  >
+</div>
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" id="password"
+      name="password"
+      [(ngModel)]="user.password"
+      #password="ngModel"
+      required
+  >
+</div>
+
+  <div class="form-group">
+      <button (click)="onSubmit()" type="submit" class="btn btn-primary">ajouter</button>
+  </div>
+  </form>
+</div>
+

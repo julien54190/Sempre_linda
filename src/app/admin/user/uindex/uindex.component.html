@@ -1,0 +1,39 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Numero</th>
+        <th>Rue</th>
+        <th>Ville</th>
+        <th>ZIP</th>
+        <th>date Création</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td><a [routerLink]="['edit', user.id]">Edit</a></td>
+        <td>{{user.id}}</td>
+        <td>{{user.nom}}</td>
+        <td>{{user.prenom}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.numero_domicile}}</td>
+        <td>{{user.rue_domicile}}</td>
+        <td>{{user.ville_domicile}}</td>
+        <td>{{user.zip}}</td>
+        <td>{{user.createdAt | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+

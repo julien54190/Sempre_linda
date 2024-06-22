@@ -1,0 +1,8 @@
+<h2>Panier</h2>
+<ul>
+  <li *ngFor="let entree of cart">
+    {{ entree.nom }} - {{ entree.prix }}€ {{ entree.isMainCourse ? '+ 3€ en plat' : '' }}
+  </li>
+</ul>
+<p>Total: {{ total }}€</p>
+
